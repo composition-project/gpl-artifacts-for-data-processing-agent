@@ -5,16 +5,16 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>eu.linksmart.services.events.gpl</groupId>
-    <version>1.5.2</version>
+    <version>${env.version}</version>
     <artifactId>reactor</artifactId>
     <name>LGPL reactor</name>
 
     <packaging>pom</packaging>
 
     <properties>
+        <ls.se.agents.version>${env.version}</ls.se.agents.version>
         <esper.version>5.5.0</esper.version>
         <weka.version>3.7.13</weka.version>
-        <ls.se.agents.version>1.5.2</ls.se.agents.version>
         <!-- test dependencies versions -->
         <java.junit.version>4.12</java.junit.version>
         <google.gson.version>2.6.2</google.gson.version>
@@ -26,7 +26,6 @@
         <site.plugin.version>3.5.1</site.plugin.version>
         <maven.source.version>2.2.1</maven.source.version>
         <wagon-webdav-version>2.10</wagon-webdav-version>
-        <ls.se.agents.version>1.5.2</ls.se.agents.version>
     </properties>
     <dependencies>
         <dependency>
