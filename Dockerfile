@@ -1,8 +1,8 @@
 FROM java:8-jre-alpine
 
-
 ARG engine
 ARG extensions
+ARG version
 
 # enabling environmental variables configuration
 ENV env_var_enabled=true
@@ -23,7 +23,7 @@ VOLUME /dependencies
 
 
 # mounting configuration and extra dependencies volumes
-ADD https://linksmart.eu/repo/service/local/artifact/maven/content?r=releases&g=eu.linksmart.services.events.gpl.distributions&a=iot.learning.universal.agent&v=LATEST agent.jar
+ADD https://nexus.linksmart.eu/repository/maven-releases/eu/linksmart/services/events/gpl/distributions/iot.learning.universal.agent/${version}/iot.learning.universal.agent-${version}.jar agent.jar
 #ONBUILD ADD distributions/IoTAgent/target/*.jar .
 
 
